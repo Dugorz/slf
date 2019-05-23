@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Themelight</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- google fonts -->
+
+		<!-- Css link -->
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="{% static 'main/css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/owl.transitions.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/lightbox.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/preloader.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/image.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/icon.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'main/css/responsive.css' %}">
+
+	</head>
+	<body id="top">
+        <header id="navigation" class="navbar-fixed-top animated-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+                    </button>
+					<!-- /responsive nav button -->
+
+					<!-- logo -->
+					<h2 style="color: rgba(255, 0, 0, 0.45);">SLF STUDIO</h2>
+					<!-- /logo -->
+                </div>
+
+				<!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="nav navbar-nav menu">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#features">Service</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#pricing-table">Price</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#testimonial">Testimonial</a></li>
+                        <li><a href="#contact-form">Contact</a></li>
+                    </ul>
+                </nav>
+				<!-- /main nav -->
+
+            </div>
+        </header>
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- load Js -->
+		<script src="{% static 'main/js/jquery-1.11.3.min.js' %}"></script>
+		<script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+		<script src="{% static 'main/js/waypoints.min.js' %}"></script>
+		<script src="{% static 'main/js/lightbox.js' %}"></script>
+		<script src="{% static 'main/js/jquery.counterup.min.js' %}"></script>
+		<script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'main/js/html5lightbox.js' %}"></script>
+		<script src="{% static 'main/js/jquery.mixitup.js' %}"></script>
+		<script src="{% static 'main/js/wow.min.js' %}"></script>
+		<script src="{% static 'main/js/jquery.scrollUp.js' %}"></script>
+		<script src="{% static 'main/js/jquery.sticky.js' %}"></script>
+		<script src="{% static 'main/js/jquery.nav.js' %}"></script>
+		<script src="{% static 'main/js/main.js' %}"></script>
+	</body>
+</html>

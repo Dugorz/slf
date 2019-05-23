@@ -1,0 +1,7 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+    <p>{{ worker.worker_name }}</p>
+    <p><img class="img-responsive" alt="photo" src="{{ worker.worker_photo.url }}" width="250" height="250"></p>
+    <div>Some text</div>
+{% endblock %}
