@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d3f3e065-cc26-4ab3-b545-7ef72282ba33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -276,12 +275,12 @@
       <workItem from="1554885313518" duration="1914000" />
       <workItem from="1554991225925" duration="595000" />
       <workItem from="1558618997946" duration="3548000" />
-      <workItem from="1558636064285" duration="886000" />
+      <workItem from="1558636064285" duration="1812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35382000" />
+    <option name="totallyTimeSpent" value="36308000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
