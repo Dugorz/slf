@@ -1,5 +1,8 @@
 {% extends 'main/main.html' %}
 
+{% block title %}
+    STUDIOSLF
+{% endblock %}
 {% load static %}
 {% block content %}
 	<div class="wrapper">
@@ -83,14 +86,12 @@
 							</div>
 							<div class="recent-work-pic">
 								<ul id="mixed-items">
-									{% for worker in workers %}
+									{% for genre in genres %}
                                         <li class="mix category-1 col-md-4 col-xs-6" data-my-order="1">
-                                            <a class="example-image-link" href="{{ worker.get_absolute_url }}">
-                                                <img class="img-responsive" src="{{ worker.worker_photo.url }}" alt="">
+                                            <a class="example-image-link" href="{{ genre.get_absolute_url }}">
+                                                <img width="350px" height="258px" src="{{ genre.cover.url }}" alt="">
                                                 <div class="overlay">
-                                                        <h3>Ivan</h3>
-                                                        <h3>Photographer</h3>
-                                                        <h3>Currently based in Kiev</h3>
+                                                    <h3>{{ genre.name }}</h3>
                                                 </div>
                                             </a>
                                         </li>
@@ -109,36 +110,22 @@
 						<h2>CREATIVE TEAM</h2>
 						<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously</p>
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".3s">
-							<img src="{% static 'main/img/team-img1.jpg' %}" alt="">
-							<div class="team-overlay">
-								<h3>ROBERT SMITH <span>Product Designer</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4  col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".6s">
-							<img src="{% static 'main/img/team-img2.jpg' %}" alt="">
-							<div class="team-overlay">
-								<h3>ROBERT SMITH <span>Product Designer</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4  col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".9s">
-							<img src="{% static 'main/img/team-img3.jpg' %}" alt="">
-							<div class="team-overlay">
-								<h3>ROBERT SMITH <span>Product Designer</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
+                    {% for worker in workers %}
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="block wow fadeInLeft" data-wow-delay=".3s">
+                                <img width="354px" height="371px" src="{{ worker.worker_photo.url }}" alt="">
+                                <div class="team-overlay">
+                                    <h3><a style="color: red" href="{{ worker.get_absolute_url }}">{{ worker.worker_name|title }}</a>
+                                        {% for genre in worker.genre.all %}
+                                            <span>Genre: {{ genre.name|title }}</span>
+                                        {% endfor %}
+                                    </h3>
+                                    <span class="icon"><i class="ion-quote"></i></span>
+                                    <p>{{ worker.description|truncatewords:25 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
 				</div>
 			</div>
 		</section>

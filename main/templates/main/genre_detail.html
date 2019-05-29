@@ -1,0 +1,15 @@
+{% extends 'main/main.html' %}
+
+{% block title %}{{ genre }}{% endblock %}
+
+{% block content %}
+    <div class="recent-work-pic">
+        <ul id="mixed-items">
+            {% for example in genre.photo_examples.all %}
+                <li style="top: 100px" class="mix category-1 col-md-4 col-xs-6" data-my-order="1">
+                    <img width="350px" height="258px" src="{{ example.image.url }}" alt="">
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
