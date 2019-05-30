@@ -1,12 +1,24 @@
 {% extends 'main/main.html' %}
 
 {% block content %}
-    <div class="container">
-        <p>{{ worker.worker_name }}</p>
-        <p><img alt="photo" src="{{ worker.worker_photo.url }}" width="250" height="250"></p>
-        {% for photo in worker.worker_portfolio.all %}
-            <img width="150px" height="150px" src="{{ photo.image.url }}" alt="">
-        {% endfor %}
-        <p>{{ worker.description }}</p>
+    <div class="test">
+        <div class="worker_info">
+            <div class="worker_photo">
+                <p>
+                    <img alt="photo" src="{{ worker.worker_photo.url }}" width="250" height="250">
+                </p>
+            </div>
+            <div class="worker_name">
+                <p>{{ worker.worker_name|upper }}</p>
+            </div>
+            <div class="worker_description">
+                <p>{{ worker.description }}</p>
+            </div>
+        </div>
+        <div class="worker_portfolio">
+            {% for photo in worker.worker_portfolio.all %}
+                <img width="150px" height="150px" src="{{ photo.image.url }}" alt="">
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

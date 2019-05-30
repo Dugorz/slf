@@ -1333,5 +1333,18 @@ footer p {
   -webkit-transition-timing-function: ease-in-out;
 }
 
+.test {
+  top: 30%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+}
 
+.worker_info {
+  margin: 80px;
+}
 
+.worker_photo {
+  float: left;
+}
