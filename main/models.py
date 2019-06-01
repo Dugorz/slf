@@ -13,7 +13,7 @@ class WorkersModel(models.Model):
     worker_name = models.CharField(max_length=50, verbose_name='Имя сотрудника')
     worker_photo = models.ImageField(upload_to='media', verbose_name='Портрет сотрудника')
     worker_portfolio = models.ManyToManyField('Image', related_name='images')
-    genre = models.ManyToManyField('Genre', related_name='genres')
+    genre = models.ManyToManyField('Genre', related_name='genres', verbose_name='Жанр')
     slug = models.SlugField(max_length=50)
     description = models.CharField(max_length=4000, verbose_name='Информация о сотруднике')
     created = models.DateTimeField(auto_now_add=True)
@@ -52,6 +52,8 @@ class Genre(models.Model):
 
 class Image(models.Model):
     name = models.CharField(max_length=150, verbose_name='Идентификатор изображения')
+    author = models.ForeignKey('WorkersModel', on_delete=models.CASCADE, related_name='author', verbose_name='Фотограф')
+    company = models.CharField(max_length=250, verbose_name='Компания')
     image = models.ImageField(upload_to='media', verbose_name='Изображение')
     slug = models.SlugField(max_length=50)
 
